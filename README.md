@@ -99,7 +99,7 @@ SSH into the control node and follow the steps below:
 - Copy the `Ansible/roles/elkserver.yml` file to the `/etc/ansible/roles/` directory:
   - `$ sudo docker cp elkserver.yml <CONTAINER-NAME>:/etc/ansible/roles/elkserver.yml`
 - Once attached to the Docker container, update the `hosts` file to include the ELK VM IP address: 
-  ![ELK IP](Images/elk-ip.png)
+  ![ELK IP](Images/host-ip.png)
 - Run the playbook to configure the ELK Server VM:
   - `$ ansible-playbook /etc/ansible/roles/elkserver.yml`
 - Once configuration is completed, navigate to `http://<ELK-PUBLIC-IP>:5601/app/kibana` to check that the installation worked as expected:
